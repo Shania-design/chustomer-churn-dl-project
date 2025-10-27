@@ -16,3 +16,5 @@ X['Geography'] = LabelEncoder().fit_transform(X['Geography'])
 X['Gender'] = LabelEncoder().fit_transform(x['Gender'])
 
 X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+scalar = StandardScaler()
+X_train = scalar.fit_transform(X_train)
